@@ -716,7 +716,7 @@ authority parse_json_authority(const std::string &authorityJsonOrFile)
 
 authority parse_json_authority_or_key(const std::string &authorityJsonOrFile)
 {
-   if (boost::istarts_with(authorityJsonOrFile, "DRC") || boost::istarts_with(authorityJsonOrFile, "PUB_R1"))
+   if (boost::istarts_with(authorityJsonOrFile, "DRM") || boost::istarts_with(authorityJsonOrFile, "PUB_R1"))
    {
       try
       {
