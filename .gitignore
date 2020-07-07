@@ -76,7 +76,7 @@ witness_node_data_dir
 
 Testing/*
 build.tar.gz
-build/*
+# build/*
 build-debug/*
 
 etc/eosio/node_*
