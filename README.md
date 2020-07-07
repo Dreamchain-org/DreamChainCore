@@ -36,6 +36,41 @@ cd DreamChainCore
 ./scripts/eosio_uninstall.sh
 ```
 
+6.  To run the node
+
+```
+./scripts/node/automated_start.sh arg1 arg2 arg3 arg4 arg5 arg6 arg7 arg8
+
+arg1 - public key of the node (must be created prior to this step)
+arg2 - private key of the node(must be created prior to this step)
+arg3 - account name (must be created prior to this step)
+arg4 - nodeos running port (default:8888)
+arg5 - p2p listening port (default:9010)
+arg6 - ip address of another working node with its p2p port
+arg7 - ip address of another working node with its p2p port
+arg8 - ip address of another working node with its p2p port
+
+```
+
+All the arguments are mandatory.
+
+7. If the node stoped working with a log - "hard restart required", please run the following command to restart the node
+
+```
+./scripts/node/hard_start.sh arg1 arg2 arg3 arg4 arg5 arg6 arg7 arg8
+
+arg1 - public key of the node (must be of the stopped node)
+arg2 - private key of the node(must be of the stopped node)
+arg3 - account name (must be of the stopped node)
+arg4 - nodeos running port (default:8888)
+arg5 - p2p listening port (default:9010)
+arg6 - ip address of another working node with its p2p port
+arg7 - ip address of another working node with its p2p port
+arg8 - ip address of another working node with its p2p port
+```
+
+All the arguments are mandatory.
+
 ### Running on Docker
 
 1.  Clone this repo
@@ -61,14 +96,16 @@ docker build dreamchain/node:latest .
 ```
 docker run -d -v `pwd`:/node/ -p 8888:8888 -p 9010:9010 dreamchain/node:latest /node/automated_start.sh arg1 arg2 arg3 arg4 arg5 arg6 arg7 arg8
 
-arg1 - public key of the node (must be of the stopped node)
-arg2 - private key of the node(must be of the stopped node)
-arg3 - account name (must be of the stopped node)
+arg1 - public key of the node (must be created prior to this step)
+arg2 - private key of the node(must be created prior to this step)
+arg3 - account name (must be created prior to this step)
 arg4 - nodeos running port (default:8888)
 arg5 - p2p listening port (default:9010)
 arg6 - ip address of another working node with its p2p port
 arg7 - ip address of another working node with its p2p port
 arg8 - ip address of another working node with its p2p port
+
+
 ```
 
 All the arguments are mandatory.
@@ -78,9 +115,9 @@ All the arguments are mandatory.
 ```
 docker run -d -v `pwd`:/node/ -p 8888:8888 -p 9010:9010 dreamchain/node:latest /node/hard_start.sh arg1 arg2 arg3 arg4 arg5 arg6 arg7 arg8
 
-arg1 - public key of the node (must be created prior to this step)
-arg2 - private key of the node(must be created prior to this step)
-arg3 - account name (must be created prior to this step)
+arg1 - public key of the node (must be of the stopped node)
+arg2 - private key of the node(must be of the stopped node)
+arg3 - account name (must be of the stopped node)
 arg4 - nodeos running port (default:8888)
 arg5 - p2p listening port (default:9010)
 arg6 - ip address of another working node with its p2p port
