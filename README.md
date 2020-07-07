@@ -91,7 +91,7 @@ cd DreamChainCore
 docker build dreamchain/node:latest .
 ```
 
-4.  run the docker image by running the following command (make sure you are in DreamChainCore/scripts/node directory)
+4.  run the docker image by running the following command (make sure you are in `DreamChainCore/scripts/node` directory)
 
 ```
 docker run -d -v `pwd`:/node/ -p 8888:8888 -p 9010:9010 dreamchain/node:latest /node/automated_start.sh arg1 arg2 arg3 arg4 arg5 arg6 arg7 arg8
@@ -110,7 +110,7 @@ arg8 - ip address of another working node with its p2p port
 
 All the arguments are mandatory.
 
-4. If the node stoped working with a log - "hard restart required", please run the following command to restart the node (make sure you are in DreamChainCore/scripts/node directory)
+4. If the node stoped working with a log - "hard restart required", please run the following command to restart the node (make sure you are in `DreamChainCore/scripts/node` directory)
 
 ```
 docker run -d -v `pwd`:/node/ -p 8888:8888 -p 9010:9010 dreamchain/node:latest /node/hard_start.sh arg1 arg2 arg3 arg4 arg5 arg6 arg7 arg8
